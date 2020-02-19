@@ -84,6 +84,9 @@ h1, h2 {
 
 a {
     text-decoration: none;
+    text-decoration-color: none;
+    outline: none;
+  
     
 }
 
@@ -117,11 +120,12 @@ figcaption {
 
 .contact-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     max-width: 980px;
     margin-top: 4rem;
     flex-wrap: wrap;
+    color: unset;
 }
  
 
@@ -146,6 +150,7 @@ footer {
     align-items: center;
     height: 6rem;
     background-color:  #081826;
+
 }
 
 @media screen, print {
@@ -160,4 +165,12 @@ footer {
 
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+#java {
+    color: white;
+}
+
+#footer-size {
+    font-size: .75rem;
 }
