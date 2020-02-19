@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+      <script src="https://kit.fontawesome.com/9f3880ef33.js" crossorigin="anonymous"></script>
     <title>Drew's Personal Web</title>
-</head>
-<body>
-    <nav id="navbar"> 
-        <ul class="nav-list">
-            <li>
-                <a href="#welcome-section">About</a>
-            </li>
-            <li>
-                <a href="#welcome-section">Projects</a>
-            </li>
-            <li>
-                <a href="#welcome-section">Contact</a>
-            </li>
-        </ul>
+    <link href="/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul class="nav-list">
+        <li>
+          <a href="#welcome-section">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
     </nav>
     <section id="welcome-section">
-    <h1>Welcome to my page!</h1>
+      <h1>Drew's Epic Web Page</h1>
     </section>
-    <section id="projects">
+    <section id="projects" class="projects-section">
+    
+        <h2 class="projects-section-header">List of My Projects</h2>
 
-    </section>
-    <section id="contact">
 
+
+      <div id="project-list">
+        <a href="/Reptile Page/reptile.html">
+        <figure class="project-tile">
+          <img src="/images/brown-and-black-lizard-on-gray-rock-3743881.jpg" alt="Lizard" />
+          <figcaption>Reptile Page</figcaption>
+        </figure>
+
+    </a>
+    <a href="/Video Games/video.html">
+        <figure class="project-tile">
+          <img src="/images/vrdude.jpg" alt="Video Game" />
+          <figcaption>Video Game Blog</figcaption>
+        </figure>
+        </a>
+        <a href="/Snowboarding Adventures/snowboard.html">
+        <figure class="project-tile">
+          <img src="/images/man-in-black-snowboard-with-binding-performs-a-jump-848599.jpg"
+            alt="Shredding Powder"
+          />
+          <figcaption>Snowboarding</figcaption>
+        </figure>
+        </a>
+      </div>
     </section>
+    <section id="contact" class="contact-section">
+        <div class="contact-section-header">
+         <h2 id="contact-caption">Let's work together...</h2>
+            <p id="paragraph-cap">How do you take your coffee?</p>
+            </div>
+            <div class="contact-links">
+        <a id=profile-link href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a id=profile-link href="https://github.com/drewsobe3" target="_blank"><i class="fab fa-github"></i> Github</a>
+        <a id=profile-link href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a id=profile-link href="https://login.yahoo.com/" target="_blank"><i class="fa fa-at"></i> Email</a>
+        <a id=profile-link href="http://127.0.0.1:5501/phone%20number/%23.html"><i class="fas fa-phone-square-alt"></i> Call</a>
+    </section>
+</div>
     <footer>
-        
+        <p>&copy; Kean Design 2020 For Educational Purposes Only</p>
     </footer>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    
-</body>
+  </body>
 </html>
