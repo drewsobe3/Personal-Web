@@ -19,7 +19,6 @@ import { starships } from '../data/starships.js'
 
 const greetingDiv = document.querySelector('.greeting')
 
-const castList = document.createElement("ul")
 
 
 let counter = 1
@@ -28,20 +27,26 @@ let counter = 1
 greetingDiv.appendChild(castList)
 
 people.forEach(person => {
-    const listItem = document.createElement("li")
-    listItem.textContent = person.name
-    castList.appendChild(listItem)
-
+   
 
     let anchorWrap = document.createElement("a")
     anchorWrap.href = "#"
+
     let imageItem = document.createElement("img")
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${counter}.jpg`
-    greetingDiv.appendChild(imageItem)
+   
+
+    imageItem.addEventListener('error', (event) => {
+        //console.log(`${event.type}: Loading image\n`;)
+        //console.log(event)
+        imageItem.hidden = true
+        
+    })
+    
     //add some way to click/ handle user clicks on the image
-    imageItem.addEventListener("click", () =>{
-        console.log("It Worked")
-        MouseEvent 
+    imageItem.addEventListener("click", (event) => {
+        console.log(event)
+ 
     })
     anchorWrap.appendChild(imageItem)
     greetingDiv.appendChild(anchorWrap)
@@ -49,4 +54,3 @@ people.forEach(person => {
 
 })
 
-greetingDiv.appendChild(castList)
