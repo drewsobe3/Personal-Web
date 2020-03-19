@@ -1,7 +1,4 @@
-import { films } from '../data/films.js'
 import { people } from '../data/people.js'
-import { planets } from '../data/planets.js'
-import { starships } from '../data/starships.js'
 
 // console.log("Starwars page code stuff")
 // console.log(document.title)//root of everything that is in console
@@ -18,25 +15,64 @@ import { starships } from '../data/starships.js'
 
 
 const greetingDiv = document.querySelector('.greeting')
+const maleButton = document.querySelector('#maleButton')
+const femaleButton = document.querySelector('#femaleButton')
+const otherButton = document.querySelector('#otherButton')
+
+const maleCharacters = people.filter(person => person.gender === "male")
+
+
+const femaleCharacters = people.filter(person => person.gender === "female")
+
+
+const otherCharacters = people.filter(person => {
+    if (person.gender === "hermaphrodite" 
+    || person.gender === "n/a"
+    || person.gender === "none") {
+        return person
+    }
+
+}) 
 
 
 
-let counter = 1
+maleButton.addEventListener("click", (event) => {
+    populateDOM(maleCharacters)
+})
 
+femaleButton.addEventListener("click", (event) => {
+    populateDOM(femaleCharacters)
+})
 
-greetingDiv.appendChild(castList)
+otherButton.addEventListener("click", (event) => {
+    populateDOM(otherCharacters)
+})
 
-people.forEach(person => {
-   
+//"url": "https://swapi.co/api/people/1/"
 
-    let anchorWrap = document.createElement("a")
+function getCharNumber(url) {
+    let end = url.lastIndexOf('/')
+    let start = end - 2
+    if(url.charAt(start) === '/') { 
+        start++
+    }
+    return url.slice(start, end)
+}
+
+//getCharNumber("https://swapi.co/api/people/1/")
+
+function populateDOM(Characters) { 
+    Characters.forEach(person => {
+        // need to extract the number from the person.url property
+        let charNum = getCharNumber(person.url)
+    let anchorWrap = document.createElement('a')
     anchorWrap.href = "#"
 
-    let imageItem = document.createElement("img")
-    imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${counter}.jpg`
+    let imageItem = document.createElement('img')
+    imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
    
 
-    imageItem.addEventListener('error', (event) => {
+    imageItem.addEventListener('error', () => {
         //console.log(`${event.type}: Loading image\n`;)
         //console.log(event)
         imageItem.hidden = true
@@ -50,7 +86,11 @@ people.forEach(person => {
     })
     anchorWrap.appendChild(imageItem)
     greetingDiv.appendChild(anchorWrap)
-    counter++
+    
 
 })
 
+maleButton.addEventListener("click", (event) => {
+    console.log("Clicked on maleButton")
+})
+}
