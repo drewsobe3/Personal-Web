@@ -14,15 +14,11 @@ import { people } from '../data/people.js'
 
 
 
-const greetingDiv = document.querySelector('.greeting')
+const gallery = document.querySelector('.gallery')
 const maleButton = document.querySelector('#maleButton')
 const femaleButton = document.querySelector('#femaleButton')
 const otherButton = document.querySelector('#otherButton')
 
-const maleCharacters = people.filter(person => person.gender === "male")
-
-
-const femaleCharacters = people.filter(person => person.gender === "female")
 
 
 const otherCharacters = people.filter(person => {
@@ -34,21 +30,19 @@ const otherCharacters = people.filter(person => {
 
 }) 
 
-
-
 maleButton.addEventListener("click", (event) => {
-    populateDOM(maleCharacters)
+    populateDOM(people.filter(person => person.gender === 'male'))
 })
 
 femaleButton.addEventListener("click", (event) => {
-    populateDOM(femaleCharacters)
+    populateDOM(people.filter(person => person.gender === "female"))
+
 })
 
 otherButton.addEventListener("click", (event) => {
     populateDOM(otherCharacters)
 })
 
-//"url": "https://swapi.co/api/people/1/"
 
 function getCharNumber(url) {
     let end = url.lastIndexOf('/')
@@ -59,14 +53,21 @@ function getCharNumber(url) {
     return url.slice(start, end)
 }
 
-//getCharNumber("https://swapi.co/api/people/1/")
 
-function populateDOM(Characters) { 
-    Characters.forEach(person => {
+function removeChildren(element) {
+    while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
+
+function populateDOM(characters) { 
+    removeChildren(gallery)
+    characters.forEach(person => {
         // need to extract the number from the person.url property
         let charNum = getCharNumber(person.url)
     let anchorWrap = document.createElement('a')
     anchorWrap.href = "#"
+    
 
     let imageItem = document.createElement('img')
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
@@ -85,7 +86,7 @@ function populateDOM(Characters) {
  
     })
     anchorWrap.appendChild(imageItem)
-    greetingDiv.appendChild(anchorWrap)
+    gallery.appendChild(anchorWrap)
     
 
 })
