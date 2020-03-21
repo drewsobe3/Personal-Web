@@ -14,7 +14,7 @@ li {
     display: flex;
 }
 
-nav {
+.nav {
     border: solid 2px black;
     padding-right: 1rem;
 }

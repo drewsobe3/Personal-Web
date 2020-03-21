@@ -1,5 +1,6 @@
 import { people } from '../data/people.js'
 
+
 // console.log("Starwars page code stuff")
 // console.log(document.title)//root of everything that is in console
 // //console.log(document.children)
