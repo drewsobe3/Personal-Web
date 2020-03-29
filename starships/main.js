@@ -8,6 +8,18 @@ const navList = document.querySelector('.navList')
 
 const shipView = document.querySelector('.main')
 
+const dialog = document.querySelector('.modal')
+
+const closeButton = document.querySelector('.modal-close')
+
+const modalBackground = document.querySelector('.modal-background')
+
+closeButton.addEventListener('click', () => {
+    dialog.classList.toggle("is-active")
+})
+modalBackground.addEventListener('click', () => {
+    dialog.classList.toggle("is-active")
+}) 
 function populateNav(starships) {
     starships.forEach(starship => {
         
@@ -15,7 +27,7 @@ function populateNav(starships) {
     anchorWrap.href = '#'
     anchorWrap.addEventListener("click", event => {
         let shipName = event.target.textContent
-        const foundShip = starships.find(ship => ship.name === shipName);
+        const foundShip = starships.find(ship => ship.name === shipName)
         populateShipView(foundShip)
     })
     
@@ -30,10 +42,16 @@ function populateNav(starships) {
 }
 
 function populateShipView(shipData) {
+    removeChildren(shipView)
     let shipNum = getLastNumber(shipData.url)
     let shipImage = document.createElement('img')
-    shipImage.src = `https://starwars-visualguide.com/assets/img/characters/${shipNum}.jpg`
+    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
+    shipImage.addEventListener('error', event => {
+        shipImage.hidden = true
+    dialog.classList.toggle("is-active");
+    })
     shipView.appendChild(shipImage)
+    
 }
 
 populateNav(starships)
