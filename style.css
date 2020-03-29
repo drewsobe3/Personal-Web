@@ -86,13 +86,15 @@ a {
     text-decoration: none;
     text-decoration-color: none;
     outline: none;
-  
-    
 }
+
+
+
 
 figcaption {
     text-align: center;
     color: white
+    
 }
 
 #contact { 
