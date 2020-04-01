@@ -8,6 +8,12 @@ h1 {
     font-size: 48px;
 }
 
+h2 {
+    font-size: large;
+    color: white;
+    font-family: monospace;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -29,7 +35,10 @@ body {
 .box {
     display: flex;
     justify-content: center;
+    font-size: small;
+    text-decoration-color: white;
 }
+
 li {
     line-height: 2.0rem;xzc
     font-family: Helvetica, Arial, sans-serif;
@@ -59,6 +68,7 @@ a:hover {
 
   .container {
       margin: 3rem;
+      text-decoration-color: white;
       
   }
   
@@ -82,10 +92,21 @@ a:hover {
 .navList {
 
 }
+
+p {
+    color: white;
+}
+
+.modal-content {
+    text-decoration: white;
+
+}
+
 footer {
     display: flex;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
+    text-decoration-color: white;
+    background-color: rgb(91, 94, 95);
 
 }
