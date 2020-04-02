@@ -26,8 +26,12 @@ h1 {
 }
 
 body {
-    background-color: #7f3faad5;
+    background-color: #772aaa;
     margin: unset;
+    background-image: url(/images/sky-space-milky-way-stars-110854.jpg), url(/images/planet-1702788_1920.jpg), url(/images/tunnel-3233082_1280.jpg);
+    background-position:center top, right top, center bottom;
+	background-repeat:no-repeat, repeat-x, repeat-y;
+
 }
 
 a > img {
