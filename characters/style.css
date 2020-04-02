@@ -1,14 +1,39 @@
 :root {
-    box-sizing: border-box;
+   
+    
+}
+
+head {
+    margin: unset;
+}
+
+header {
+    background-color: rgb(99, 97, 97);
+    margin: unset;
+    display: flex;
+    justify-content: center;
+    height: 5;
+}
+h1 {
+    font-size: 6rem;
+    justify-content: center;
+    display: flex;
+    margin: 2rem;
+    color: rgb(254, 230, 36);
+    
+
 }
 
 body {
     background-color: #dfdfdf;
+    margin: unset;
 }
 
 a > img {
-    height: 18rem;
-    margin: 4px;
+    height: 16rem;
+    margin: 8px;
+    border: 10rem;
+    border-radius: 5px;
 }
 
 button {
@@ -16,4 +41,5 @@ button {
     background-color: rgb(0, 162, 255);
     border-radius: 10px;
     padding: 8px;
+    margin: 2px;
 }
