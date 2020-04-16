@@ -37,14 +37,15 @@ body {
 a > img {
     height: 16rem;
     margin: 8px;
-    border: 10rem;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 button {
     font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(254, 230, 36);
     border-radius: 10px;
+    border: rebeccapurple;
     padding: 8px;
     margin: 8px;
 }
