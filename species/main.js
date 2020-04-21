@@ -2,7 +2,21 @@ import { people } from '../data/people.js'
 import { getLastNumber, removeChildren } from '../utils.js'
 
 const gallery = document.querySelector('.gallery')
+const { ccg-card-generator, } = require("ccg-card-generator");
+  
+const target = "./rulebook.md";
 
+const destination = "./rulebook.pdf";
+
+const options = {
+  "debug": true,
+  "style": "./node_modules/ccg-card-generator/lib/styles/prototype.css",
+  "printOptions": {
+    displayHeaderFooter: false,
+  },
+};
+
+ccg-card-generator( target, destination, options);
 
 }) 
 
