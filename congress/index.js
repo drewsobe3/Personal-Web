@@ -1,6 +1,12 @@
 import { senators } from '../data/senators.js'
+import { removeChildren } from '../scripts/utils.js'
 
 const senatorGrid = document.querySelector('.senatorGrid')
+const seniorityButton = document.querySelector('#seniorityButton')
+
+seniorityButton.addEventListener('click', () => {
+    birthdaySort()
+})
 
 function getSimplifiedSenators(senatorArray) {
     return senatorArray.map(senator => {
@@ -12,13 +18,14 @@ function getSimplifiedSenators(senatorArray) {
             seniority: parseInt(senator.seniority, 10),
             missedVotesPct: senator.missed_votes_pct,
             party: senator.party,
-            loyaltyPct: senator.votes_with_party_pct
+            loyaltyPct: senator.votes_with_party_pct,
+            date_of_birth: senator.date_of_birth
         }
     })
 }
 
 function populateSenatorDiv(simpleSenators) {
-    console.log(simpleSenators)
+    removeChildren(senatorGrid)
     simpleSenators.forEach(senator => {
         let senDiv = document.createElement('div')
         let senFigure = document.createElement('figure')
@@ -96,7 +103,20 @@ const mostLoyal = getSimplifiedSenators(republicans).reduce((acc, senator) => {
     return acc.loyaltyPct > senator.loyaltyPct ? acc : senator
 })
 
-//console.log(loyalArray)
+// sort by value
+function senioritySort() {
+    populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
+        return parseInt(a.seniority) - parseInt(b.seniority)
+    })
+    )
+}
 
+function birthdaySort() {
+    populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
+        return parseInt(a.date_of_birth) - parseInt(b.date_of_birth)
+    })
+    )
+}
+
+// by default on page load, we show all senators unsorted
 populateSenatorDiv(getSimplifiedSenators(senators))
-console.log(mostSeniority.seniority)

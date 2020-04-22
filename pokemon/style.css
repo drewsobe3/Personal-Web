@@ -1,0 +1,130 @@
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 217, 0, 0.824);
+    margin: 0px;
+    padding: 0px;
+    height: 75px;
+    background-image: url(/images/pokemon-logo-png-pokemon-logo-png-2000.png);
+    background-size: 200px;
+    background-repeat: repeat-y;
+    background-position: center;
+
+  }
+
+  h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body {background-image: url(/images/background-hero.png);
+    
+}
+
+  
+  .pokemonGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 50px;
+    margin-left: 5rem;
+    
+    
+    
+  }
+  
+  .scene {
+    width: 200px;
+    height: 260px;
+    border: 1px solid #CCC;
+    margin: 4px;
+    margin-bottom: 20px;
+    perspective: 600px;
+    border-radius: 30px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 6, 6);
+    text-align: center;
+    font-weight: bold;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    border-color: rgb(12, 35, 98);
+    border-style: solid;
+    border-width: 10px;
+    
+    
+
+  }
+  
+  .card__face--front {
+    background: red;
+    background-image: url(/images/pokeball\ bkgd.jpg);
+    background-size: 200px; 
+    background-repeat: no-repeat;
+  }
+  
+  .card__face--back {
+    background: blue;
+    transform: rotateY(180deg);
+  }
+  
+  li {
+    text-align: left;
+  }
+
+  #startButton {
+      display: flex;
+      justify-content: left;
+      background-color: rgb(12, 24, 79);
+      border-radius: 7px;
+      padding: 15px 40px 15px;
+      background-imag: url(/images/blue\ button-1.png);
+      background-size: 10rem;
+      background-repeat: no-repeat;
+      background-position-x: -.5rem;
+      background-position-y: -1rem;
+      margin-top: 50px;
+
+      
+  }
+
+  #newButton {
+    display: flex;
+    justify-content: left;
+    justify-content:space-evenly;
+    background-color: rgb(213, 50, 50);
+    border-radius: 7px;
+    padding: 15px 40px 15px;
+    background-imag: url(/images/blue\ button-1.png);
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-position-x: -.5rem;
+    background-position-y: -1rem;
+    margin-right: px;
+    margin-top: 50px;
+
+    
+}
