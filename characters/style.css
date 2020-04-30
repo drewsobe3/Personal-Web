@@ -11,7 +11,14 @@ header {
     justify-content: center;
     height: 6rem;
     padding-bottom: 1rem;
+    background-image: url(/images/star-wars-logo-font-download.jpg);
+    background-color: rgb(0, 0, 0);
+    background-size: 250px;
+    background-repeat: repeat-y;
+    background-position: center;
+    height: 7rem;
 }
+
 h1 {
     font-size: 4rem;
     justify-content: center;
@@ -37,6 +44,12 @@ a > img {
     border-radius: 8px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
 button {
     font-size: 2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -46,3 +59,16 @@ button {
     padding: 8px;
     margin: 8px;
 }
+
+.gallery {
+    display: -moz-popup;
+    justify-content: sa;
+    padding-left: 5rem;
+    transition: transform .2s; /* Animation */
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.2); /* (150% zoom)*/
+  }
