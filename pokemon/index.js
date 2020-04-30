@@ -117,5 +117,4 @@ async function getAPIData(url) {
         }
     ])
     populatePokeCard(Axibor) 
-    frontImage.src = '..images/'
   }
