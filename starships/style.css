@@ -40,8 +40,16 @@ body {
 .box {
     display: flex;
     justify-content: center;
-    font-size: small;
-    text-decoration-color: white;
+    font-size: 25px;
+    font
+    color: rgb(228, 4, 4);
+    background-color: rgb(255, 255, 255);
+    background-image: url(/images/warning-sign-30915_1280.png);
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 5.75rem;
+   
 }
 
 li {
