@@ -1,4 +1,8 @@
 
+
+head{
+    margin: unset;
+}
 header {
     display: flex;
     flex-direction: column;
@@ -11,6 +15,7 @@ header {
     background-size: 200px;
     background-repeat: repeat-y;
     background-position: center;
+    color: white;
 
   }
 
@@ -23,7 +28,9 @@ header {
     justify-content: space-evenly;
 }
 
-body {background-image: url(/images/background-hero.png);
+body {
+    background-image: url(/images/background-hero.png);
+    margin: unset;
     
 }
 
@@ -87,7 +94,7 @@ body {background-image: url(/images/background-hero.png);
   }
   
   .card__face--back {
-    background: blue;
+    background: rgb(181, 181, 191);
     transform: rotateY(180deg);
   }
   
@@ -107,7 +114,9 @@ body {background-image: url(/images/background-hero.png);
       background-position-x: -.5rem;
       background-position-y: -1rem;
       margin-top: 50px;
-
+      color: white;
+      font-size: 20px;
+      
       
   }
 
@@ -125,6 +134,8 @@ body {background-image: url(/images/background-hero.png);
     background-position-y: -1rem;
     margin-right: px;
     margin-top: 50px;
+    color: white;
+    font-size: 20px;
 
     
 }

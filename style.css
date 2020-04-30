@@ -50,20 +50,27 @@ div {
     width: 100%;
     height: 100vh;
     background: #355B8C;
-    background-image: url("/images/sanddunes.jpg");
-    background-size: 90rem;
+    background-image: url("/images/desert-1654439.jpg");
+    background-size: 90rem;    
     background-repeat: no-repeat;
-    background-position: inherit;
 }
 
 #project-list {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-around;
+    width: 1000px;
+     
 
 }
 
+#project-tile {
+    
+}
+
 .projects-section-header {
-    max-width: 640px;
+    display: flex;
+    justify-content: inherit;
+    max-width: 1200px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid var(--main-white);
 }
@@ -72,6 +79,7 @@ div {
     text-align: center;
     padding: 5rem 2rem;
     background: #131A40;
+
 }
 
 h1, h2 {
