@@ -77,8 +77,6 @@ button {
 }
 
 .gallery {
-    display: -moz-popup;
-    justify-content: sa;
     padding-left: 5rem;
     transition: transform .2s; /* Animation */
     height: 200px;

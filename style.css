@@ -89,7 +89,7 @@ div {
 
 .projects-section-header {
     display: flex;
-    justify-content: inherit;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid var(--main-white);
