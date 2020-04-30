@@ -57,7 +57,7 @@ body {
   .scene {
     width: 200px;
     height: 260px;
-    border: 1px solid #CCC;
+    border: px solid #CCC;
     margin: 4px;
     margin-bottom: 20px;
     perspective: 600px;
@@ -89,6 +89,7 @@ body {
     border-color: rgb(12, 35, 98);
     border-style: solid;
     border-width: 10px;
+    font-family: 'Permanent Marker', cursive;
     
     
 
@@ -104,6 +105,9 @@ body {
   .card__face--back {
     background: rgb(181, 181, 191);
     transform: rotateY(180deg);
+    background-image: url(/images/pokemon\ texture.png);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
   }
   
   li {

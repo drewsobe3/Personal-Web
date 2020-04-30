@@ -98,23 +98,24 @@ async function getAPIData(url) {
   }
   
   function addPokemon() {
-    let Thoremon = new Pokemon(190, 290, 'thoremon',
+    let Axibor = new Pokemon(190, 290, 'axibor',
       [
         {
           ability: {
-          name: 'Thunder Belly'
+          name: 'Acid Saliva'
           }
         },
         {
           ability: {
-          name: 'Beard Power'
+          name: 'Mustache Scratch'
           }
         },
         {
           ability: {
-          name: 'Rancid Stench'
+          name: 'Deodorant Smear'
           }
         }
     ])
-    populatePokeCard(Thoremon)
+    populatePokeCard(Axibor) 
+    frontImage.src = '..images/'
   }

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+ 
 a {
     background-color 
     transition: background-color .5s;
@@ -159,6 +159,10 @@ figcaption {
     background: #17AEBF;
 }
 
+@keyframes stretch {
+    /* declare animation actions here */
+  }
+
 .contact-links {
     display: flex;
     justify-content: space-evenly;
@@ -167,6 +171,15 @@ figcaption {
     margin-top: 4rem;
     flex-wrap: wrap;
     color: unset;
+    transition: ease-in-out 2s;
+    animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; 
 }
  
 
@@ -184,6 +197,8 @@ h1 {
 p {
     color: white;
 }
+
+
 
 footer {
     display: flex;
