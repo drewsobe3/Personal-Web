@@ -1,3 +1,4 @@
+import { getLastNumber, removeChildren } from '../utils.js'
 
 // Reusable async function to fetch data from the provided url
 async function getAPIData(url) {

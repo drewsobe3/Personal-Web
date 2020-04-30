@@ -18,6 +18,14 @@ header {
     color: white;
 
   }
+  
+  form :active {
+    color: red;
+  }
+  
+  form button {
+    background: white;
+  }
 
   h1 {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

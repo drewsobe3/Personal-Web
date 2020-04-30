@@ -22,7 +22,12 @@ header {
     text-decoration: none;
     font-size: 3rem;
     padding: 1rem;
-    background-color: rgb(80, 82, 83)
+    background-color: black;
+    background-image: url(/images/star-wars-logo-font-download.jpg);
+    background-size: 200px;
+    background-repeat: repeat-y;
+    background-position: center;
+    height: 7rem;
    
 }
 
