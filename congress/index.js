@@ -1,5 +1,5 @@
 import { senators } from '../data/senators.js'
-import { removeChildren } from '../scripts/utils.js'
+import { removeChildren } from '../utils.js'
 
 const senatorGrid = document.querySelector('.senatorGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
@@ -118,5 +118,7 @@ function birthdaySort() {
     )
 }
 
+
 // by default on page load, we show all senators unsorted
 populateSenatorDiv(getSimplifiedSenators(senators))
+  
