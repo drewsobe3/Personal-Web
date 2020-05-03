@@ -76,10 +76,10 @@ body {
       font-size: 20px;  
 }    
 
-.buttonHeader {
-    margin-top: unset;
+#buttonHeader {
+    margin: unset;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 
 
 }    
